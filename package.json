@@ -3,12 +3,14 @@
   "version": "1.0.0",
   "description": "tests cypress",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cypress:open": "cypress open"
   },
   "author": "Asalas",
   "license": "ISC",
   "devDependencies": {
     "cypress": "^13.2.0"
   }
+
 }
