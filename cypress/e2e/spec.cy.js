@@ -1,17 +1,30 @@
-describe('My First Test', () => {
+context('Adonline Test', () => {
+  beforeEach(()=> {
+    cy.viewport(1400,850)
+    cy.login("juanp","juanp")
+
+  })//beforeEach
+
+
+describe('Create Order', () => {
   it('Gets, types and asserts', () => {
-    cy.visit('https://example.cypress.io')
+    
+    cy.wait(14000);
+    cy.OpenMenu();
+    cy.wait(1000); 
+    cy.NewOrder();
+    cy.FillOrder();
+    cy.NewClassified();
+    cy.wait(2000); 
+    cy.FillClassified();
+    cy.FillMaterials();
+    cy.FillParcla();
+    cy.SaveOrder();
+    
 
-    cy.contains('type').click()
-
-    // Should be on a new URL which
-    // includes '/commands/actions'
-    cy.url().should('include', '/commands/actions')
-
-    // Get an input, type into it
-    cy.get('.action-email').type('fake@email.com')
-
-    //  Verify that the value has been updated
-    cy.get('.action-email').should('have.value', 'fake@email.com')
   })
+
 })
+
+})//context
+
