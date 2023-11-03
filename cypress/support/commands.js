@@ -52,9 +52,9 @@ Cypress.Commands.add('login', (user, password) => {
     cy.get('#mat-select-9').click();
     cy.contains('Palabras').click();
     cy.get('#mat-input-11').type('1201', { force: true });
-    cy.get('#mat-select-11').click();
-    cy.contains('Tipo de original').click();
-    cy.contains('02-Pal. Cla. Mod. Edi.').click();
+    cy.get('#mat-select-11').click({ force: true });
+    cy.contains('Tipo de original').click({ force: true });
+    cy.contains('02-Pal. Cla. Mod. Edi.').click({ force: true });
    
     //Cerrar busqueda
     cy.get('.icon-section-drch #btBuscar:nth-child(3n)').click();
